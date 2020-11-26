@@ -1,8 +1,7 @@
 name: dropfiles_window
 description: A flutter plugin project to support Drag&Drop a file
 version: 0.0.1
-author: gregory yoon
-homepage:
+repository: https://github.com/gregoryyoon/dropfiles_window
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
