@@ -4,8 +4,8 @@ flutter gets the file name from ths callback function.
 
 ## Supported Platforms
 - [x] macOS
-- [-] Windows
-- [-] Linux
+- [ ] Windows
+- [ ] Linux
 
 ## Usage
 refer /example/lib/main.dart for more details.
