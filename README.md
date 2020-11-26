@@ -2,6 +2,7 @@
 # dropfiles_window
 this plugin modify windows style to accep Drag&Drop a file and wheh Drop a file from this other window. this plugin does call a dart callback function.
 flutter gets the file name from ths callback function.
+![Alt Text](https://github.com/gregoryyoon/dropfiles_window/howto.gif)
 
 ## Supported Platforms
 - [x] macOS
@@ -29,8 +30,4 @@ if (Platform.isWindows == true) {
       }
     }
 ```
-<<<<<<< HEAD
 [Uinsg packages] https://flutter.dev/docs/development/packages-and-plugins/using-packages
-=======
-[Uinsg packages] https://flutter.dev/docs/development/packages-and-plugins/using-packages
->>>>>>> 8046b6d83ffd08f9f08375c117744796531384b3
