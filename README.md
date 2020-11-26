@@ -6,8 +6,8 @@ flutter gets the file name from ths callback function.
 ![Alt Text](https://github.com/gregoryyoon/dropfiles_window/blob/master/howto.gif)
 
 ## Supported Platforms
-- [x] macOS
-- [ ] Windows
+- [ ] macOS
+- [x] Windows
 - [ ] Linux
 
 ## Usage
@@ -30,3 +30,7 @@ if (Platform.isWindows == true) {
       }
     }
 ```
+refer /example/lib/main.dart for all source code
+
+
+
