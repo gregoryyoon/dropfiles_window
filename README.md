@@ -29,4 +29,8 @@ if (Platform.isWindows == true) {
       }
     }
 ```
+<<<<<<< HEAD
 [Uinsg packages] https://flutter.dev/docs/development/packages-and-plugins/using-packages
+=======
+[Uinsg packages] https://flutter.dev/docs/development/packages-and-plugins/using-packages
+>>>>>>> 8046b6d83ffd08f9f08375c117744796531384b3
