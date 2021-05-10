@@ -65,8 +65,17 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Plugin example app'),
         ),
         body: Center(
-          child:
+          child: Column(
+            children: [
+              Spacer(),
               Text('Running on: $_platformVersion, DropFile=$_dropFileName\n'),
+              Spacer(),
+              TextButton(
+                onPressed: () => DropfilesWindow.modifyWindowAcceptFiles(null),
+                child: Text('reset drop handler'),
+              )
+            ],
+          ),
         ),
       ),
     );

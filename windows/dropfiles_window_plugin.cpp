@@ -104,6 +104,12 @@ void DropfilesWindowPlugin::HandleMethodCall(
     nValue |= WS_EX_ACCEPTFILES ;
     SetWindowLong(hWnd, GWL_EXSTYLE, nValue);  
     result->Success();
+  } else if (method_call.method_name().compare("resetWindowAcceptFiles") == 0) {
+    HWND hWnd = GetRootWindow(registrar_->GetView());
+    LONG nValue = GetWindowLong(hWnd, GWL_EXSTYLE);
+    nValue = nValue &  ~WS_EX_ACCEPTFILES ;
+    SetWindowLong(hWnd, GWL_EXSTYLE, nValue);  
+    result->Success();
   }
   else {
     result->NotImplemented();

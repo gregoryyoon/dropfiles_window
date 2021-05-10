@@ -23,6 +23,7 @@ class DropfilesWindow {
       await _channel.invokeMethod('modifyWindowAcceptFiles');
     } else {
       _channel.setMethodCallHandler(null);
+      await _channel.invokeMethod('resetWindowAcceptFiles');
     }
   }
 }
