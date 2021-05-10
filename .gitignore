@@ -5,3 +5,8 @@
 .pub/
 
 build/
+example/windows/flutter/generated_plugin_registrant.h
+example/windows/flutter/generated_plugins.cmake
+example/windows/flutter/generated_plugin_registrant.cc
+example/pubspec.lock
+pubspec.lock
