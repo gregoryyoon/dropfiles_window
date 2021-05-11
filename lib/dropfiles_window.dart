@@ -12,13 +12,18 @@ class DropfilesWindow {
     return version;
   }
 
-  static void modifyWindowAcceptFiles(OnDropFileCallback callback) async {
-    _channel.setMethodCallHandler((MethodCall call) async {
-      // print("method=${call.method} argumemts=${call.arguments}");
-      assert(call.method == 'onDropFile');
-      callback(call.arguments);
-    });
-    await _channel.invokeMethod('modifyWindowAcceptFiles');
-    return;
+  /// to remove the callback call the function again with null as parameter
+  static void modifyWindowAcceptFiles(OnDropFileCallback? callback) async {
+    if (callback != null) {
+      _channel.setMethodCallHandler((MethodCall call) async {
+        // print("method=${call.method} argumemts=${call.arguments}");
+        assert(call.method == 'onDropFile');
+        callback(call.arguments);
+      });
+      await _channel.invokeMethod('modifyWindowAcceptFiles');
+    } else {
+      _channel.setMethodCallHandler(null);
+      await _channel.invokeMethod('resetWindowAcceptFiles');
+    }
   }
 }

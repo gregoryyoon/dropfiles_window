@@ -1,8 +1,9 @@
-import 'package:flutter/material.dart';
 import 'dart:async';
 import 'dart:io';
-import 'package:flutter/services.dart';
+
 import 'package:dropfiles_window/dropfiles_window.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(MyApp());
@@ -64,8 +65,17 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Plugin example app'),
         ),
         body: Center(
-          child:
+          child: Column(
+            children: [
+              Spacer(),
               Text('Running on: $_platformVersion, DropFile=$_dropFileName\n'),
+              Spacer(),
+              TextButton(
+                onPressed: () => DropfilesWindow.modifyWindowAcceptFiles(null),
+                child: Text('reset drop handler'),
+              )
+            ],
+          ),
         ),
       ),
     );
